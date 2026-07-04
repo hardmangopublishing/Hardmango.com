@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hard Mango Publishing — An Independent Fiction Imprint</title>
+<meta name="description" content="Hard Mango Publishing is an independent fiction imprint publishing action thrillers, science fiction, mystery, and romantasy. Home of Red Burton, Peter Agro, James Blackwood, and Peter St Clair.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cloth:#1E2A23;        /* bookcloth green-ink */
+    --cloth-deep:#16201A;
+    --paper:#EFE9DC;        /* endpaper */
+    --paper-dim:#DDD5C2;
+    --mango:#E8A13C;        /* foil accent */
+    --ink:#221F1A;
+    --burton:#2E4E52;       /* thriller teal-slate */
+    --agro:#232C48;         /* sci-fi deep navy */
+    --blackwood:#5A2626;    /* mystery oxblood */
+    --stclair:#4A2B4E;      /* romantasy plum */
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    background:linear-gradient(180deg,var(--cloth) 0%,var(--cloth-deep) 100%);
+    color:var(--paper);
+    font-family:'Newsreader',Georgia,serif;
+    font-size:18px;line-height:1.65;
+    min-height:100vh;
+  }
+  .wrap{max-width:860px;margin:0 auto;padding:0 24px}
+
+  /* ---- colophon hero ---- */
+  header{padding:96px 0 64px;text-align:center}
+  .mark{
+    display:inline-block;color:var(--mango);
+    font-size:20px;letter-spacing:.5em;margin-left:.5em;
+  }
+  h1{
+    font-family:'Fraunces',Georgia,serif;font-weight:700;
+    font-size:clamp(40px,7vw,72px);line-height:1.04;
+    letter-spacing:.01em;margin:18px 0 10px;color:var(--paper);
+  }
+  .rule{
+    width:88px;height:2px;background:var(--mango);
+    margin:26px auto 22px;border:0;
+  }
+  .colophon{
+    font-size:15px;letter-spacing:.24em;text-transform:uppercase;
+    color:var(--paper-dim);font-weight:500;
+  }
+  .statement{
+    max-width:560px;margin:44px auto 0;font-size:20px;
+    font-style:italic;color:var(--paper);
+  }
+  .statement em{color:var(--mango);font-style:italic}
+
+  /* ---- the shelf ---- */
+  section.shelf{padding:36px 0 30px}
+  .shelf-label{
+    text-align:center;font-size:13px;letter-spacing:.28em;
+    text-transform:uppercase;color:var(--paper-dim);margin-bottom:34px;
+  }
+  .spines{
+    display:flex;justify-content:center;align-items:flex-end;
+    gap:18px;
+  }
+  .spine{
+    position:relative;display:flex;flex-direction:column;
+    justify-content:space-between;align-items:center;
+    width:118px;height:420px;padding:26px 10px 20px;
+    border-radius:3px 6px 6px 3px;
+    text-decoration:none;color:var(--paper);
+    box-shadow:inset 4px 0 0 rgba(255,255,255,.07),
+               inset -6px 0 12px rgba(0,0,0,.28),
+               0 14px 26px rgba(0,0,0,.35);
+    transition:transform .35s ease,box-shadow .35s ease;
+    animation:settle .8s ease both;
+  }
+  .spine:nth-child(1){background:var(--burton);animation-delay:.05s}
+  .spine:nth-child(2){background:var(--agro);animation-delay:.15s}
+  .spine:nth-child(3){background:var(--blackwood);animation-delay:.25s}
+  .spine:nth-child(4){background:var(--stclair);animation-delay:.35s}
+  @keyframes settle{from{opacity:0;transform:translateY(26px)}to{opacity:1;transform:translateY(0)}}
+  .spine:hover,.spine:focus-visible{transform:translateY(-12px);box-shadow:inset 4px 0 0 rgba(255,255,255,.1),inset -6px 0 12px rgba(0,0,0,.28),0 24px 34px rgba(0,0,0,.45)}
+  .spine:focus-visible{outline:2px solid var(--mango);outline-offset:4px}
+  .spine .top{color:var(--mango);font-size:15px;letter-spacing:.3em;margin-left:.3em}
+  .spine .name{
+    writing-mode:vertical-rl;transform:rotate(180deg);
+    font-family:'Fraunces',serif;font-weight:600;
+    font-size:24px;letter-spacing:.06em;white-space:nowrap;
+  }
+  .spine .genre{
+    font-size:11.5px;letter-spacing:.2em;text-transform:uppercase;
+    color:rgba(239,233,220,.75);text-align:center;line-height:1.5;
+  }
+  .shelf-board{
+    height:14px;max-width:640px;margin:0 auto;border-radius:2px;
+    background:linear-gradient(180deg,#3A3229,#241F19);
+    box-shadow:0 10px 22px rgba(0,0,0,.4);
+  }
+  .shelf-note{
+    text-align:center;font-size:14.5px;color:var(--paper-dim);
+    margin-top:26px;font-style:italic;
+  }
+
+  /* ---- about ---- */
+  section.about{padding:70px 0 10px;text-align:center}
+  .about p{max-width:600px;margin:0 auto;color:var(--paper);}
+  .about p + p{margin-top:18px}
+
+  /* ---- footer ---- */
+  footer{padding:80px 0 56px;text-align:center}
+  footer .rule{margin-bottom:30px}
+  .contact a{color:var(--mango);text-decoration:none;border-bottom:1px solid rgba(232,161,60,.35)}
+  .contact a:hover,.contact a:focus-visible{border-bottom-color:var(--mango)}
+  .contact a:focus-visible{outline:2px solid var(--mango);outline-offset:3px}
+  address{
+    font-style:normal;font-size:14px;color:var(--paper-dim);
+    margin-top:22px;line-height:1.8;letter-spacing:.04em;
+  }
+  .fine{font-size:12.5px;color:rgba(221,213,194,.55);margin-top:26px;letter-spacing:.06em}
+
+  /* ---- mobile: spines lie in a stack ---- */
+  @media (max-width:640px){
+    header{padding:72px 0 48px}
+    .spines{flex-direction:column;align-items:center;gap:14px}
+    .spine{
+      width:min(340px,88vw);height:76px;flex-direction:row;
+      padding:0 20px;border-radius:3px 6px 6px 3px;
+    }
+    .spine .name{writing-mode:horizontal-tb;transform:none;font-size:20px}
+    .spine .top{margin-left:0}
+    .spine .genre{text-align:right}
+    .shelf-board{max-width:min(340px,88vw)}
+  }
+  @media (prefers-reduced-motion:reduce){
+    .spine{animation:none;transition:none}
+    html{scroll-behavior:auto}
+  }
+</style>
+</head>
+<body>
+
+<header class="wrap">
+  <span class="mark" aria-hidden="true">◆</span>
+  <h1>Hard Mango<br>Publishing</h1>
+  <hr class="rule">
+  <p class="colophon">An Independent Fiction Imprint · Est. Fort Lauderdale, Florida</p>
+  <p class="statement">Story first. Craft always. Books that <em>move</em>.</p>
+</header>
+
+<section class="shelf wrap" aria-label="Our authors">
+  <p class="shelf-label">The List</p>
+  <div class="spines">
+    <a class="spine" href="https://www.amazon.com/dp/B0H6GSXVDQ" rel="noopener">
+      <span class="top" aria-hidden="true">◆</span>
+      <span class="name">RED BURTON</span>
+      <span class="genre">Action<br>Thrillers</span>
+    </a>
+    <a class="spine" href="mailto:contact@hardmango.com?subject=Peter%20Agro">
+      <span class="top" aria-hidden="true">◆</span>
+      <span class="name">PETER AGRO</span>
+      <span class="genre">Science<br>Fiction</span>
+    </a>
+    <a class="spine" href="mailto:contact@hardmango.com?subject=James%20Blackwood">
+      <span class="top" aria-hidden="true">◆</span>
+      <span class="name">JAMES BLACKWOOD</span>
+      <span class="genre">Mystery &amp;<br>Suspense</span>
+    </a>
+    <a class="spine" href="mailto:contact@hardmango.com?subject=Peter%20St%20Clair">
+      <span class="top" aria-hidden="true">◆</span>
+      <span class="name">PETER ST CLAIR</span>
+      <span class="genre">Romantasy</span>
+    </a>
+  </div>
+  <div class="shelf-board" role="presentation"></div>
+  <p class="shelf-note">Red Burton's five-book Ghost Meridian series is available now. New titles across the list arriving through 2026.</p>
+</section>
+
+<section class="about wrap">
+  <p>Hard Mango Publishing is a small press with a simple charter: fiction with propulsion. Thrillers that don't apologize for being fun. Science fiction with grease under its fingernails. Mysteries that play fair and cut deep. Romantasy with real stakes.</p>
+  <p>We publish few books, and we finish what we start.</p>
+</section>
+
+<footer class="wrap">
+  <hr class="rule">
+  <p class="contact">Readers, booksellers, and rights inquiries: <a href="mailto:contact@hardmango.com">contact@hardmango.com</a></p>
+  <address>
+    Hard Mango Publishing<br>
+    3020 NE 32nd Ave #107, Fort Lauderdale, FL 33308
+  </address>
+  <p class="fine">© Hard Mango Publishing. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
