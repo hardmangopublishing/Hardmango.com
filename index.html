@@ -106,6 +106,25 @@
     margin-top:26px;font-style:italic;
   }
 
+  /* ---- free prequel ---- */
+  .free{
+    max-width:600px;margin:40px auto 0;padding:26px 28px;text-align:center;
+    background:var(--burton);border-left:4px solid var(--mango);
+    border-radius:2px 6px 6px 2px;
+    box-shadow:0 14px 26px rgba(0,0,0,.3);
+  }
+  .free h2{
+    font-family:'Fraunces',Georgia,serif;font-weight:600;
+    font-size:26px;line-height:1.2;color:var(--paper);
+  }
+  .free p{font-size:17px;margin-top:8px;color:var(--paper)}
+  .free a.btn{
+    display:inline-block;margin-top:18px;padding:12px 26px;border-radius:3px;
+    background:var(--mango);color:var(--ink);font-weight:500;text-decoration:none;
+  }
+  .free a.btn:hover{background:#F0B45C}
+  .free a.btn:focus-visible{outline:2px solid var(--paper);outline-offset:3px}
+
   /* ---- about ---- */
   section.about{padding:70px 0 10px;text-align:center}
   .about p{max-width:600px;margin:0 auto;color:var(--paper);}
@@ -128,13 +147,17 @@
     header{padding:72px 0 48px}
     .spines{flex-direction:column;align-items:center;gap:14px}
     .spine{
-      width:min(340px,88vw);height:76px;flex-direction:row;
-      padding:0 20px;border-radius:3px 6px 6px 3px;
+      width:min(360px,92vw);height:76px;flex-direction:row;
+      padding:0 18px;gap:12px;border-radius:3px 6px 6px 3px;
     }
-    .spine .name{writing-mode:horizontal-tb;transform:none;font-size:20px}
-    .spine .top{margin-left:0}
-    .spine .genre{text-align:right}
-    .shelf-board{max-width:min(340px,88vw)}
+    .spine .name{
+      writing-mode:horizontal-tb;transform:none;
+      font-size:clamp(14px,4.3vw,17px);letter-spacing:.04em;
+      flex:1 1 auto;text-align:left;
+    }
+    .spine .top{margin-left:0;flex:0 0 auto}
+    .spine .genre{text-align:right;flex:0 0 auto;font-size:9.5px;letter-spacing:.14em}
+    .shelf-board{max-width:min(360px,92vw)}
   }
   @media (prefers-reduced-motion:reduce){
     .spine{animation:none;transition:none}
@@ -178,6 +201,12 @@
   </div>
   <div class="shelf-board" role="presentation"></div>
   <p class="shelf-note">Red Burton's five-book Ghost Meridian series is available now. New titles across the list arriving through 2026.</p>
+
+  <div class="free">
+    <h2>Read The Kyiv Variable free</h2>
+    <p>The Cole Maddox prequel novella: the mission in Kyiv that got him burned. Sent straight to your inbox.</p>
+    <a class="btn" href="/kyiv/">Get the free prequel</a>
+  </div>
 </section>
 
 <section class="about wrap">
